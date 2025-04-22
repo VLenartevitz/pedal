@@ -1,0 +1,30 @@
+### Funcionalidades Feitas
+
+- Cadastro de Bicicletas: Permite que os usuários cadastrem suas bicicletas.
+- Conexão com Strava: Permite que os usuários se conectem ao Strava para sincronização de dados.
+
+### Telas
+
+- WelcomeScreen, RegisterEquips e QuestionScreen não estão sendo utilizadas atualmente no fluxo.
+
+### Fluxo Atual
+
+O fluxo atual do aplicativo é SplashScreen, ConnectScreen, RegisterBike e Home, nesta sequência.
+
+1. SplashScreen: Sempre será a primeira tela a aparecer. Ela possui uma lógica para ficar alguns segundos na tela e então seguir para a próxima do fluxo, atualmente a ConnectScreen.
+
+2. ConnectScreen: Tela onde o usuário fará login com o Strava, receberá o token de acesso para fazer login na nossa API e então continuará para a próxima tela.
+   - A fazer
+     - Ao clicar no botão conectar com Strava, deve-se verificar se o usuário possui alguma bicicleta. Se tiver, os dados devem estar preenchidos na próxima tela. Se não tiver, deixar em branco para o usuário preencher.
+
+3. RegisterBike: Nessa tela, o usuário preencherá as informações da sua bicicleta, mesmo que ele já tenha uma ou não.
+   - A fazer
+     - O botão salvar está cadastrando as bicicletas, mas não está redirecionando para a próxima tela, que seria a Home.
+
+4. Home: Atualmente, apenas os componentes do cabeçalho e o menu de navegação foram feitos.
+   - A fazer
+     - Implementar o sistema de pop-ups e fluxo para visualização da bicicleta.
+
+    Outros Arquivos
+    token_manager.dart -> nele tem comentarios de como ta feito o gerenciamento do token do app(Singleton)
+    authentication.dart -> arquivo para gerenciar a autenticação com a API do Strava
